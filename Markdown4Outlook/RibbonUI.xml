@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" 
+          onLoad="OnLoadRibonUI"
+   			loadImage="GetImage">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabNewMailMessage">
+        <group id="group1" label="Markdown4Outlook">
+           <toggleButton id="toogleAddInEnableButton" 
+                         label="Enable Markdown4Outlook" 
+                         image="markdown4outlook.png" 
+                         size="large" 
+                         getPressed="ToogleAddInEnableButton_GetPressed" 
+                         onAction="ToogleAddInEnableButton_Click" />
+        	
+			<menu id="menu" label="Options" image="options.png">
+				<button id="fontButton" label="Font..." 
+				        onAction="ConfigFont_Click" />
+				<button id="styleButton" label="Style..."
+						onAction="ConfigStyle_Click" />
+			</menu>
+        	
+		    <button id="feedbackButton" label="Feedback"
+					image="feedback.png"		            
+		            onAction="Feedback_Click" />
+        	
+		    <button id="aboutButton" label="About"
+					image="about.png"		            
+		            onAction="About_Click" />
+      	
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

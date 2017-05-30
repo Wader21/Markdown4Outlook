@@ -1,0 +1,8 @@
+Debug
+Release
+obj
+/setup/Markdown4Outlook.msi
+/setup/Markdown4Outlook.wixpdb
+/setup/dll.wxs
+/setup/setup.wixobj
+/setup/tlb.wxs

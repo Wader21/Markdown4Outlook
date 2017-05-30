@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  <Product Id="988D5C6C-ABA2-488D-AE27-6B2C938E1444"
+    Name="Markdown4Outlook"
+    Language="1033"
+    Version="1.0.0"
+    UpgradeCode="251F0E8C-8326-435B-8AFD-1EC495A1C7BB"
+    Manufacturer="Wader21 Studio">
+
+    <Package Description="Markdown Editor for Outlook"
+      Comments= "An Outlook addin that helps you write emails in Markdown"
+      InstallerVersion="200"
+      Compressed="yes"
+    />
+
+    <Media Id="1" Cabinet="Markdown4Outlook.cab" EmbedCab="yes" CompressionLevel="high"/>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="AppDataFolder" Name="AppData">
+        <Directory Id="AppRootDirectory" Name="Markdown4Outlook">
+          <Component Id="ApplicationFiles" Guid="B817B03E-A75E-4114-AB36-EE5FCF36DD24">
+            <File Id="ApplicationFile1" Source="..\Markdown4Outlook\bin\Release\AngleSharp.dll"/>
+            <File Id="ApplicationFile2" Source="..\Markdown4Outlook\bin\Release\AngleSharp.xml"/>
+            <File Id="ApplicationFile3" Source="..\Markdown4Outlook\bin\Release\log4net.dll"/>
+            <File Id="ApplicationFile4" Source="..\Markdown4Outlook\bin\Release\log4net.xml"/>
+            <File Id="ApplicationFile5" Source="..\Markdown4Outlook\bin\Release\Markdig.dll"/>
+            <File Id="ApplicationFile6" Source="..\Markdown4Outlook\bin\Release\Markdig.xml"/>
+            <File Id="ApplicationFile8" Source="..\Markdown4Outlook\bin\Release\Markdown4Outlook.pdb"/>
+            <File Id="ApplicationFile10" Source="..\Markdown4Outlook\bin\Release\NetOffice.dll"/>
+            <File Id="ApplicationFile11" Source="..\Markdown4Outlook\bin\Release\NetOffice.xml"/>
+            <File Id="ApplicationFile12" Source="..\Markdown4Outlook\bin\Release\OfficeApi.dll"/>
+            <File Id="ApplicationFile13" Source="..\Markdown4Outlook\bin\Release\OfficeApi.xml"/>
+            <File Id="ApplicationFile14" Source="..\Markdown4Outlook\bin\Release\OutlookApi.dll"/>
+            <File Id="ApplicationFile15" Source="..\Markdown4Outlook\bin\Release\OutlookApi.xml"/>
+            <File Id="ApplicationFile16" Source="..\Markdown4Outlook\bin\Release\PreMailer.Net.dll "/>
+
+            <RegistryKey Root="HKCU" Key="Software\Markdown4Outlook\version">
+              <RegistryValue Value="1.0.0" Type="string" KeyPath="yes" />
+            </RegistryKey>
+            
+                <File Id="Markdown4Outlook.tlb" Source="..\Markdown4Outlook\bin\Release\Markdown4Outlook.tlb">
+                    <TypeLib Id="{B6881D25-2119-4F04-BCD5-E4EFAFC8DCB6}" Description="Markdown4Outlook" HelpDirectory="TARGETDIR" Language="0" MajorVersion="1" MinorVersion="0">
+                        <Interface Id="{17AB6C97-BFFF-3912-84F3-A3F6F63153B8}" Name="_CommonUtils" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{35972795-9724-322E-8FCC-FA81BFD4FF45}" Name="_COMAddin" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{461C0147-1C85-34E0-B9F7-BB14BEB6349D}" Name="_InspectorWrapper" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{55AB4285-2A3E-3A39-BD9B-8CA72C916ED1}" Name="_Configuration" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{5C0635D5-A373-33BD-ACB4-40D25CFBB8E1}" Name="ITaskPane" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{5C49DD48-C417-3945-98D0-010D3604FD3D}" Name="_Application" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{6409596A-0FF3-34D2-960A-0028278B336F}" Name="_OnConnectionEventHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{646B6B31-43B8-38EC-818D-5A5B0DBBB22E}" Name="_OnStartupCompleteEventHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{6CF51BF4-4035-3B60-965B-45DA5BF40A2D}" Name="IEventBinding" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{7391AD79-9CB2-322D-8972-DA46E5CFCF75}" Name="_OnBeginShutdownEventHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{9EA66E20-8ACD-3176-9CFC-16FFCC88648E}" Name="_MyTaskPane" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{A152EC2F-A44B-3008-9787-707B4BD605ED}" Name="_OnDisconnectionEventHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{B2CEC4EE-14C0-3AE4-B446-8B9CE18659C1}" Name="_OnAddInsUpdateEventHandler" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{BB82779B-EFD3-3A33-B4B9-BE75B5BD451C}" Name="_COMObject" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{F562C492-497B-3EC1-9F7D-C32C486F2616}" Name="_Options" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{FA77938D-C1D9-37DB-8AF4-3442FAEDDB85}" Name="_Core" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{FCAACAC3-EDB6-3641-AE50-AC4A4E8B1BB2}" Name="__CustomTaskPane" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{FDEC524C-E9FD-32B7-BEB3-7A36090D9CBE}" Name="_Addin" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                    </TypeLib>
+                </File>
+                
+                <Class Id="{02B8DCC0-6D27-3345-B831-00145A14C2A1}" Context="InprocServer32" Description="Markdown4Outlook.MyTaskPane" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="Markdown4Outlook.MyTaskPane" Description="Markdown4Outlook.MyTaskPane" />
+                </Class>
+                <Class Id="{6026EED1-9205-38A2-AEC0-9EC44948DC73}" Context="InprocServer32" Description="Markdown4Outlook.Configuration" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="Markdown4Outlook.Configuration" Description="Markdown4Outlook.Configuration" />
+                </Class>
+                <Class Id="{778CB074-487C-31AF-8D71-C3EDD842E116}" Context="InprocServer32" Description="Markdown4Outlook.Options" ThreadingModel="both" ForeignServer="mscoree.dll">
+                    <ProgId Id="Markdown4Outlook.Options" Description="Markdown4Outlook.Options" />
+                </Class>
+                <Class Id="{B49C8937-2944-44BF-95A1-B08EA6ACE754}" Context="InprocServer32" Description="Markdown4Outlook.Addin" ThreadingModel="both" Programmable="yes" ForeignServer="mscoree.dll">
+                    <ProgId Id="Markdown4Outlook.Addin" Description="Markdown4Outlook.Addin" />
+                </Class>
+                <File Id="Markdown4Outlook.dll" Source="..\Markdown4Outlook\bin\Release\Markdown4Outlook.dll" />
+                <Interface Id="{000C0601-0000-0000-C000-000000000046}" Name="Office .NET Framework Lockback Bypass Key" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32\1.0.0.0" Name="Class" Value="Markdown4Outlook.MyTaskPane" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32\1.0.0.0" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32" Name="Class" Value="Markdown4Outlook.MyTaskPane" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{02B8DCC0-6D27-3345-B831-00145A14C2A1}\InprocServer32" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32\1.0.0.0" Name="Class" Value="Markdown4Outlook.Configuration" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32\1.0.0.0" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32" Name="Class" Value="Markdown4Outlook.Configuration" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{6026EED1-9205-38A2-AEC0-9EC44948DC73}\InprocServer32" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32\1.0.0.0" Name="Class" Value="Markdown4Outlook.Options" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32\1.0.0.0" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32" Name="Class" Value="Markdown4Outlook.Options" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{778CB074-487C-31AF-8D71-C3EDD842E116}\InprocServer32" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\Implemented Categories\{62C8FE65-4EBB-45e7-B440-6E39B2CDBF29}" Value="" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32\1.0.0.0" Name="Class" Value="Markdown4Outlook.Addin" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32\1.0.0.0" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32\1.0.0.0" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32\1.0.0.0" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32" Name="Class" Value="Markdown4Outlook.Addin" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32" Name="Assembly" Value="Markdown4Outlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32" Name="RuntimeVersion" Value="v4.0.30319" Type="string" Action="write" />
+                <RegistryValue Root="HKCR" Key="CLSID\{B49C8937-2944-44BF-95A1-B08EA6ACE754}\InprocServer32" Name="CodeBase" Value="file:///[#Markdown4Outlook.dll]" Type="string" Action="write" />
+                <RegistryValue Root="HKCU" Key="Software\Microsoft\Office\Outlook\AddIns\Markdown4Outlook.Addin" Name="LoadBehavior" Value="3" Type="integer" Action="write" />
+                <RegistryValue Root="HKCU" Key="Software\Microsoft\Office\Outlook\AddIns\Markdown4Outlook.Addin" Name="FriendlyName" Value="Markdown4Outlook" Type="string" Action="write" />
+                <RegistryValue Root="HKCU" Key="Software\Microsoft\Office\Outlook\AddIns\Markdown4Outlook.Addin" Name="Description" Value="Assembly Description" Type="string" Action="write" />
+                
+            
+
+            <RemoveFolder Id="RemoveApplicationFolder" On="uninstall" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="DefaultFeature" Level="1">
+      <ComponentRef Id="ApplicationFiles"/>
+    </Feature>
+
+    <UI Id="UserInterface">
+      <Property Id="WIXUI_INSTALLDIR" Value="TARGETDIR" />
+      <Property Id="WixUI_Mode" Value="Custom" />
+
+      <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="9" Bold="yes" />
+      <TextStyle Id="WixUI_Font_Title"  FaceName="Tahoma" Size="9" Bold="yes" />
+
+      <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+
+      <DialogRef Id="ProgressDlg" />
+      <DialogRef Id="ErrorDlg" />
+      <DialogRef Id="FilesInUse" />
+      <DialogRef Id="FatalError" />
+      <DialogRef Id="UserExit" />
+
+      <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="EndDialog" Value="Return" Order="2"></Publish>
+
+    </UI>
+    <UIRef Id="WixUI_Common" />
+
+    <!-- icon for add/remove program in control panel -->
+    <Icon Id="icon.ico" SourceFile="icon.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <!-- Check for .NET Framework Versions -->
+    <PropertyRef Id="NETFRAMEWORK45"/>
+    <Condition Message="This application requires .NET Framework 4.5 or higher. Please install the .NET Framework then run this installer again.">
+        <![CDATA[Installed OR NETFRAMEWORK45]]>
+    </Condition>
+
+  </Product>
+</Wix>
