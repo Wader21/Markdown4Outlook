@@ -6,3 +6,4 @@ obj
 /setup/dll.wxs
 /setup/setup.wixobj
 /setup/tlb.wxs
+/setup/*.ZIP

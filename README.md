@@ -9,6 +9,9 @@ An Outlook add-on that provides a Markdown editor and preview pane for each emai
 * Uses [PreMailer](https://github.com/milkshakesoftware/PreMailer.Net) to apply custom CSS stylesheet to render HTML output
 * Required .NET Framework 4.5 or higher, installer can be found form [here](https://www.microsoft.com/en-au/download/details.aspx?id=42642) or [here](https://www.microsoft.com/en-au/download/details.aspx?id=30653) 
   
+# Installing  
+
+Download the latest install package Markdown4Outlook.ZIP from [release](https://github.com/Wader21/Markdown4Outlook/releases/latest) page.
 
 # Contributions
 
